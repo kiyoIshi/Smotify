@@ -2,20 +2,27 @@
 
   class Account {
 
-    public function __construct() {
+    private $errorArray;
 
+    public function __construct() {
+      $this->errorArray = array();
     }
 
-    public function register() {
-      $this->validateUserName($username);
-      $this->validateFirstName($firstname);
-      $this->validateLastName($lastname);
-      $this->validateEmails($email, $email2);
-      $this->validatePasswords($password, $password2);
+    public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
+      $this->validateUserName($un);
+      $this->validateFirstName($fn);
+      $this->validateLastName($ln);
+      $this->validateEmails($em, $ema2);
+      $this->validatePasswords($pw, $pw2);
     }
 
     private function validateUserName($un) {
+      if(strlen($un) > 25 || strlen($un) < 5){
+        array_push($this->errorArray, "Your username must be between 5 and 25 characters");
+        return;
+      }
 
+      //TODO: check if username exists
     }
     
     private validateFirstName($un) {

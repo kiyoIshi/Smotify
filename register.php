@@ -2,7 +2,6 @@
  include("include/classes/Account.php");
 
  $account = new Account();
- $account->register();
 
  include("include/handlers/register-handler.php");
  include("include/handlers/login-handler.php");

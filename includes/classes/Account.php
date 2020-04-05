@@ -25,16 +25,31 @@
       //TODO: check if username exists
     }
     
-    private validateFirstName($un) {
-      
+    private function validateFirstName($fn) {
+      if(strlen($fn) > 25 || strlen($fn) < 2){
+        array_push($this->errorArray, "Your firstname must be between 2 and 25 characters");
+        return;
+      }
     }
     
-    private validateLasrName($un) {
-      
+    private function validateLastName($ln) {
+      if(strlen($n) > 25 || strlen($ln) < 2){
+        array_push($this->errorArray, "Your lastname must be between 2 and 25 characters");
+        return;
+      }
     }
     
-    private validateEmails($un) {
-      
+    private function validateEmails($em, $em2) {
+      if ($em != $em2) {
+        array_push($this->errorArray, "Your emails doesn't match");
+        return;
+      }
+      if(!filter_var($em, FILTER_VALIDATE_EMAIL)){
+        array_push($this->errorArray, "Email is invalid");
+        return;
+      }
+
+      //TODO: check that username hasn't already been used
     }
     
     private validatePasswords($un) {

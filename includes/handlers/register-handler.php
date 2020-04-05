@@ -21,17 +21,11 @@ function sanitizeFormString ($inputText) {
 if(isset($_POST['resisterButton'])){
   //Register button was pressed"
   $username = sanitizeFormUsername($_POST['username']);
-
   $firsrname = sanitizeFormString($_POST['firstName']);
-
   $lastName = sanitizeFormString($_POST['lastNameame']);
-
   $email = sanitizeFormString($_POST['email']);
-
   $email2 = sanitizeFormString($_POST['email2']);
-
   $password = sanitizeFormPassword($_POST['password']);
-
   $password2 = sanitizeFormPassword($_POST['password2']);
 
  }

@@ -14,6 +14,14 @@
       $this->validateLastName($ln);
       $this->validateEmails($em, $ema2);
       $this->validatePasswords($pw, $pw2);
+
+      if(empty($this)->errorArray == true) {
+        //insert into DB
+        return true;
+      }
+        else {
+          return false;
+        }
     }
 
     private function validateUserName($un) {

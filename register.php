@@ -1,11 +1,11 @@
 <?php
-  // ini_set("display_errors", 1);
-  // error_reporting(E_ALL);
+  ini_set("display_errors", 1);
+  error_reporting(E_ALL);
   include("includes/config.php");
   include("includes/classes/Account.php");
   include("includes/classes/Constants.php");
 
-  $account = new Account();
+  $account = new Account($con);
 
   include("includes/handlers/register-handler.php");
   include("includes/handlers/login-handler.php");
@@ -14,6 +14,12 @@
     if(isset($_POST[$name])) {
       echo $_POST[$name];
     }
+  }
+
+  function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
   }
 ?>
 

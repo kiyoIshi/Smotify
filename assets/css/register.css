@@ -62,3 +62,20 @@ body {
   font-size: 13px;
   margin-top: 15px;
 }
+
+#inputContainer button {
+  background-color: transparent;
+  border: 2px solid #EBE6FD;
+  border-radius: 250px;
+  color: #EBE6FD;
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 20px auto;
+  height: 41px;
+  width: 100%;
+}
+
+#inputContainer button:hover {
+  cursor: pointer;
+}

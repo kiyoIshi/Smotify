@@ -13,8 +13,13 @@ else {
 
 <head>
   <title>Welcome to Smotify!</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  Hello!
+  
+
+  <div id="nowPlayingBarContainer">
+
+  </div>
 </body>
 </html>

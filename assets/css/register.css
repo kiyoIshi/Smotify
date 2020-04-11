@@ -37,6 +37,10 @@ body {
   border-right: 1px solid #C28ECE;
 }
 
+::placeholder { 
+  color: #fff;
+}
+
 #inputContainer h2 {
   text-align: center;
 }
@@ -51,4 +55,10 @@ body {
   height: 27px;
   line-height: 27px;
   width: 100%;
+}
+
+#inputContainer label {
+  color: #EBE6FD;
+  font-size: 13px;
+  margin-top: 15px;
 }

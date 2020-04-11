@@ -59,6 +59,7 @@ body {
 
 #inputContainer label {
   color: #EBE6FD;
+  display: block;
   font-size: 13px;
   margin-top: 15px;
 }
@@ -120,4 +121,10 @@ body {
   list-style-type: none;
   padding: 5px 30px;
   background: url(../images/icons/checkmark.png) no-repeat 0 0;
+}
+
+#inputContainer .errorMessage {
+  color: #04af4a;
+  font-size: 12px;
+  display: block;
 }

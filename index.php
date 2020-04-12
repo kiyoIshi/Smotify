@@ -28,6 +28,18 @@ else {
             <img src="https://i.ytimg.com/i/rb8Y3BeilRM/maxresdefault.jpg" class="albumArtWork">
           </span>
         </div>
+
+        <div class="trackInfo">
+
+          <span class="trackName">
+            <span>Hello Hello</span>
+          </span>
+
+          <span class="artistName">
+            <span>Pumpkin Pie</span>
+          </span>
+
+        </div>
       </div>
 
       <div id="nowPlayingCenter">

@@ -20,7 +20,10 @@ else {
   <div id="mainContainer">
 
   <div id="topContainer">
-    
+
+    <div id="navBarContainer">
+      
+    </div>
   </div>
 
     <div id="nowPlayingBarContainer">

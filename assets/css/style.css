@@ -234,8 +234,17 @@ body {
   width: 29%;
   max-width: 200px;
   max-width: 150px;
+  margin-bottom: 20px;
 }
 
 .gridViewItem img {
   width: 100%;
+}
+
+.gridViewInfo {
+  font-weight: 300;
+  text-align: center;
+  padding: 5px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

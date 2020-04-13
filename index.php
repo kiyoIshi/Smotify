@@ -11,7 +11,7 @@
       
       echo "<div class='gridViewItem'>
 
-              <a href='album/php?id=" . $row['id'] . "'>
+              <a href='album.php?id=" . $row['id'] . "'>
 
                 <img src='" . $row['artWorkPath'] . "'>
 

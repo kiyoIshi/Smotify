@@ -22,6 +22,12 @@ else {
   <div id="topContainer">
 
     <?php include("includes/navBarContainer.php"); ?>
+
+    <div id="mainViewContainer">
+      <div id="mainContent">
+        
+      </div>
+    </div>
   </div>
 
     <?php include("includes/nowPlayingBarContainer.php"); ?>

@@ -19,9 +19,9 @@ else {
 
   <div id="mainContainer">
 
-  <div id="topContainer">
+    <div id="topContainer">
 
-    <?php include("includes/navBarContainer.php"); ?>
+      <?php include("includes/navBarContainer.php"); ?>
 
-    <div id="mainViewContainer">
-      <div id="mainContent">
+      <div id="mainViewContainer">
+        <div id="mainContent">

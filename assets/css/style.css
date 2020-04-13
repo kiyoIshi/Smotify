@@ -214,11 +214,28 @@ body {
 }
 
 #mainViewContainer {
-  margin: 200px;
+  margin-left: 200px;
   padding-bottom: 90px;
   width: calc(100% - 220px);
 }
 
 #mainContent {
   padding: 0 20px;
+}
+
+.pageHeadingBig {
+  padding: 20px;
+  text-align: center;
+}
+
+.gridViewItem {
+  display: inline-block;
+  margin-right: 20px;
+  width: 29%;
+  max-width: 200px;
+  max-width: 150px;
+}
+
+.gridViewItem img {
+  width: 100%;
 }

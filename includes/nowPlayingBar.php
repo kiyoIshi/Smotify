@@ -21,7 +21,9 @@ $jsonArray = json_encode($resultArray);
 
   function setTrack(trackId, newPlaylist, play) {
 
-    audioElement.setTrack("assets/music/bensound-clearday.mp3");
+    $.post("includes/handlers/ajax/getSongJson.php", { songId: trackId }, function(data) {
+      console.log(data);
+    })
 
     if(play) {
       audioElement.play();
@@ -84,7 +86,7 @@ $jsonArray = json_encode($resultArray);
             <img src="assets/images/icons/play.png" alt="Play">
           </button>
 
-          <button class="controlButton pause" title="Pause button" style="display: none; onclick="pauseSong()"">
+          <button class="controlButton pause" title="Pause button" style="display: none;" onclick="pauseSong()">
             <img src="assets/images/icons/pause.png" alt="Pause">
           </button>
 

@@ -1,5 +1,6 @@
 var currentPlaylist = [];
 var audioElement;
+var mouseDown = false;
 
 function Audio() {
 
@@ -16,11 +17,25 @@ function Audio() {
     return minutes + ":" + extraZero + seconds;
   }
 
+  function updateTimeProgressBar(audio) {
+    $(".progressTime.current").text(formatTime(audio.currentTime));
+    $(".progressTime.remaining").text(formatTime(audio.duration - audio.currentTime));
+
+    var progress = audio.currentTime / audio.duration * 100;
+    $(".playBackBar .progress").css("width", progress + "%");
+  }
+
   this.audio.addEventListener("canplay", function() {
     //'this' refers to the object that the event was called on
     var duration = formatTime(this.duration);
     $(".progressTime.remaining").text(duration);
   });
+
+  this.audio.addEventListener("timeupdate", function() {
+    if(this.duration) {
+      updateTimeProgressBar(this);
+    }
+  })
 
   this.setTrack = function(track) {
     this.currentlyPlaying = track;
@@ -33,6 +48,10 @@ function Audio() {
 
   this.pause = function() {
     this.audio.pause();
+  }
+
+  this.setTime = function(seconds) {
+    this.audio.currentTime = seconds;
   }
 
 }

@@ -32,6 +32,11 @@ function Audio() {
   this.currentlyPlaying;
   this.audio = document.createElement('audio');
 
+  this.audio.addEventListener("ended", function() {
+    console.log("ended!");
+    nextSong();
+  });
+
   this.audio.addEventListener("canplay", function() {
     //'this' refers to the object that the event was called on
     var duration = formatTime(this.duration);

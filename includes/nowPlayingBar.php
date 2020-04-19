@@ -85,7 +85,7 @@ $jsonArray = json_encode($resultArray);
       currentIndex = 0;
     }
     else {
-      currentIndex ++;
+      currentIndex++;
     }
 
     var trackToPlay = currentPlaylist[currentIndex];

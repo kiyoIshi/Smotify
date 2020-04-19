@@ -114,6 +114,12 @@ $jsonArray = json_encode($resultArray);
     $(".controlButton.volume img").attr("src", "assets/images/icons/" + imageName);
   }
 
+  function setShuffle() {
+    shuffle = !shuffle;
+    var imageName = shuffle ? "shuffle-active.png" : "shuffle.png";
+    $(".controlButton.shuffle img").attr("src", "assets/images/icons/" + imageName);
+  }
+
   function setTrack(trackId, newPlaylist, play) {
 
     currentIndex = currentPlaylist.indexOf(trackId);
@@ -197,7 +203,7 @@ $jsonArray = json_encode($resultArray);
 
         <div class="buttons">
 
-          <button class="controlButton shuffle" title="Shuffle button">
+          <button class="controlButton shuffle" title="Shuffle button" onclick="setShuffle()">
             <img src="assets/images/icons/shuffle.png" alt="Shuffle">
           </button>
 

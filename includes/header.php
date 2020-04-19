@@ -8,6 +8,7 @@ include("includes/classes/Song.php");
 
 if (isset($_SESSION['userLoggedIn'])) {
   $userLoggedIn = $_SESSION['userLoggedIn'];
+  echo "<script>userLoggedIn = '$userLoggedIn';</script>";
 }
 else {
   header("Location: register.php");
@@ -17,7 +18,7 @@ else {
 <head>
   <title>Welcome to Smotify!</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/js/script.js"></script>
 </head>

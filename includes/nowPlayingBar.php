@@ -179,11 +179,12 @@ $jsonArray = json_encode($resultArray);
       });
 
       audioElement.setTrack(track);
-    })
 
-    if(play) {
-      audioElement.play();
-    }
+      if(play) {
+        playSong();
+      }
+
+    })
 
   }
 

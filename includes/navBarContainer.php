@@ -1,7 +1,7 @@
 <div id="navBarContainer">
 
   <nav class="navBar">
-    <a href="index.php" class="logo">
+    <span class="logo" onclick="openPage('index.php')">
       <img src="assets/images/icons/logo.png" alt="">
     </a>
 

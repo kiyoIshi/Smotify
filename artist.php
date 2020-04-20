@@ -12,7 +12,7 @@ $artist = new Artist($con, $artistId);
 
 ?>
 
-<div class="entitiyInfo">
+<div class="entitiyInfo borderBottom">
 
   <div class="centerSection">
 
@@ -26,4 +26,53 @@ $artist = new Artist($con, $artistId);
 
     </div>
   </div>
+</div>
+
+<div class="trackListContainer borderBottom"">
+  <ul class="trackList">   
+
+    <?php
+      $songIdArray = $artist->getSongsId();
+
+      $i = 1;
+      foreach($songIdArray as $songId) {
+
+        if(i > 5) {
+        break;
+        }
+        
+        $albumSong = new Song($con, $songId);
+        $albumArtist = $albumSong->getArtist();
+
+        echo "<li class='trackListRow'>
+                <div class='trackCount'>
+                  <img class='play' src='assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId() . "\", tempPlaylist, true)'>
+                  <span class='trackNumber'>$i</span>
+                </div>
+
+                <div class='trackInfo'>
+                  <span class='trackName'>" . $albumSong->getTitle() . "</span>
+                  <span class='trackName'>" . $albumArtist->getName() . "</span>
+                </div>
+
+                <div class='trackOptions'>
+                  <img class='optionsButton'src='assets/images/icons/more.png'>
+                </div>
+
+                <div class='trackDuration'>
+                  <span class='duration'>" . $albumSong->getDuration() . "</span>
+                </div>
+
+              </li>";
+
+        $i = $i + 1;
+      }
+    ?>
+
+    <script>
+      var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
+      tempPlaylist = JSON.parse(tempSongIds);
+    </script>
+
+  </ul>
 </div>

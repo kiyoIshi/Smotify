@@ -392,7 +392,8 @@ body {
 }
 
 .trackListContainer h2,
-.gridViewContainer h2 {
+.gridViewContainer h2,
+.artistContainer h2 {
   text-align: center;
 }
 
@@ -434,4 +435,9 @@ input:focus {
 
 .serachResultRow .artistName span {
   color: #fff;
+}
+
+.noResults {
+  margin: 50px;
+  display: block;
 }

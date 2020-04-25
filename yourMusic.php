@@ -34,7 +34,7 @@ include("includes/includedFiles.php");
                 </div>
 
                 <div class='gridViewInfo'>"
-                  . $row['name'] .
+                  . $playlist->getName() .
                 "</div>
 
               </div>";

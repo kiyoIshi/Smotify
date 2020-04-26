@@ -49,5 +49,13 @@
 			return $array;
     }
 
+    public static function getPlaylistDropdown($con, $username) {
+      $dropdown = '<select class="item playlist">
+                    <option value="">Add to playlist</option>
+                  </select>';
+
+      return $dropdown;
+    }
+
 	}
 ?>

@@ -489,3 +489,7 @@ input:focus {
   -moz-appearance: none;
   width: 100%;
 }
+
+.userInfo h1 {
+  text-align: center;
+}
